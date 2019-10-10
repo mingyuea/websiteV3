@@ -1,0 +1,77 @@
+@import 'colors';
+@import 'measurements';
+@import url('https://fonts.googleapis.com/css?family=Merriweather:700i&display=swap');
+
+$nameWidth: 20%;
+$namePadding: 5px;
+
+.main {
+	min-height: $headerMinHt;
+	max-height: $headerMaxHt;
+	position: fixed;
+	z-index: 100;
+	width: 100%;
+	background-color: white;
+	box-shadow: 0px 5px 15px $headerShadow;
+
+	/*
+	@media (max-width: 200px){
+		display: none;
+		height: 0px;
+		width: 0px;
+	}
+	*/
+}
+
+.nameCont{
+	display: inline-block;
+	position: relative;
+	//height: 100%;
+	width: $nameWidth;
+	font-size: 28px;
+
+	@media (max-width: 280px){
+		display: block;
+		font-size: 24px;
+	};
+	@media (min-width: $winMed){
+		font-size: 34px;
+	};
+	@media (min-width: $winLarge){ 
+		font-size: 40px;
+	};
+	@media (min-width: $winXL){
+		font-size: 44px;
+	}
+}
+
+.nameCont:hover{
+	cursor: pointer;
+}
+
+.nameChild{
+	font-family: 'Merriweather';
+	font-style: italic;
+	padding: 5px 0px 5px 15px;
+}
+
+.itemCont{
+	display: inline-block;
+	position: relative;
+	//left: $nameWidth;
+	//height: 100%;
+	font-size: 14px; 
+	text-align: right;
+	width: 100% - $nameWidth;
+
+	@media (min-width: $winMed){
+		font-size: 18px;
+	} @media (min-width: $winLarge){
+		font-size: 22px;
+	};
+}
+
+.homeLink{
+	text-decoration: none;
+	color: black;
+}

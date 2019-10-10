@@ -1,0 +1,39 @@
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans);
+
+$blue: rgba(71, 129, 201, 1);
+
+.skills{
+	padding: 15px 0px 15px 20px;
+	font-family: 'Fira Sans';
+	max-width: 350px;
+}
+
+.curlSym{
+	padding-left: 10px;
+	font-size: 40px;
+	font-weight: bold;
+}
+
+.objRow{
+	margin-bottom: 10px;
+	line-height: 1.5;
+}
+
+.objBody{
+	padding-left: 40px;
+}
+
+.objVal, .objField{
+	display: inline;
+	font-size: 14px;
+	margin-right: 10px;
+}
+
+.objField{
+	color: $blue;
+	font-weight: bold;
+}
+
+.objVal{
+	word-spacing: 3px;
+}

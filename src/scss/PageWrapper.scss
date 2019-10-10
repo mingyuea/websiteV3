@@ -1,0 +1,15 @@
+@import 'measurements';
+
+.body{
+	position: relative;
+	//display: block;
+	top: 60px;
+	padding: 0px 15px 20px 15px;
+
+	@media (min-width: $winMed){
+		top: 65px;
+	}
+	@media (min-Width: $winLarge){
+		top: 100px;
+	}
+}
