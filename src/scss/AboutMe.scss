@@ -1,11 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Fira+Sans);
+@import 'fadeIn';
+@import 'measurements';
 
 $blue: rgba(71, 129, 201, 1);
 
 .skills{
 	padding: 15px 0px 15px 20px;
 	font-family: 'Fira Sans';
-	max-width: 350px;
+	//max-width: 350px;
 }
 
 .curlSym{
@@ -36,4 +38,68 @@ $blue: rgba(71, 129, 201, 1);
 
 .objVal{
 	word-spacing: 3px;
+}
+
+.subtitle{
+	font-weight: bold;
+	font-size: 24px;
+	letter-spacing: 1px;
+	padding: 10px 0px;
+}
+
+%textGeneral{
+	font-family: 'Fira Sans';
+	line-height: 1.5;
+	letter-spacing: -1px;
+	word-spacing: 1px;
+	font-weight: normal;
+}
+
+.textBlob1{
+	@extend %textGeneral;
+
+	padding: 15px 10px 0px 10px;
+}
+
+.chartLabel{
+	font-family: 'Fira Sans';
+	font-size: 16px;
+}
+
+.hiddenDiv{
+	display: none;
+}
+
+.fadeInDiv{
+	@extend %fadeCont
+}
+
+.chartText{
+	@extend %textGeneral;
+	font-size: 12px;
+	padding-top: 30px;
+
+	@media (max-width: $winSm){
+		padding-top: 15px;
+		padding-bottom: 20px;
+	}
+	@media (min-width: $winMed){
+		padding-bottom: 20px;
+		font-size: 14px;
+	}
+	@media (min-width: $winLarge){
+		font-size: 16px;
+	}
+	@media (min-width: $winXL){
+		padding-top: 50px;
+		padding-left: 5vw;
+		padding-right: 5vw;
+	}
+	@media (min-width: $winXXL){
+		padding-top: 75px;
+		padding-left: 7vw;
+		padding-right: 7vw;
+		font-size: 18px;
+		letter-spacing: 0px;
+	}
 }

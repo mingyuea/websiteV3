@@ -1,0 +1,145 @@
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display);
+@import 'measurements';
+
+$cellHt: 90px;
+$cellWDef: 80px;
+$cellW: 175px;
+$cellWM: 140px;
+$cellWSm: 90px;
+$cellWXS: 70px;
+$borderPadding: 3px;
+$myBlack: rgba(0,0,0,0.92);
+
+%sizing{
+	@media (min-width: $winMed){
+		width: 150px;
+	}
+	@media (min-width: $winSm){
+		width: 120px;
+	}
+}
+
+.cellOuter{
+	@extend %sizing;
+
+	background-color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: $cellWDef +  6 * $borderPadding;
+	height: $cellHt + 6 * $borderPadding;
+	border: 5px solid $myBlack;
+
+	@media (max-width: $winXS){
+		width: $cellWXS +  6 * $borderPadding;
+		border: 3px solid $myBlack;
+	}
+	@media (min-width: $winSm){
+		width: $cellWSm +  6 * $borderPadding;
+	}
+	@media (min-width: $winMed){
+		width: $cellWM +  6 * $borderPadding;
+	}
+	@media (min-width: $winLarge){
+		width: $cellW +  6 * $borderPadding;
+	}
+}
+
+.cellBorder{
+	width: $cellWDef + 2 * $borderPadding;
+	background-color: white;
+	height: $cellHt + 2 * $borderPadding;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	border: 2px solid $myBlack;
+	border-radius: 2px;
+	//margin: 5px 10px;
+
+	@media (max-width: $winXS){
+		width: $cellWXS +  2 * $borderPadding;
+	}
+	@media (min-width: $winSm){
+		width: $cellWSm +  2 * $borderPadding;
+	}
+	@media (min-width: $winMed){
+		width: $cellWM +  2 * $borderPadding;
+	}
+	@media (min-width: $winLarge){
+		width: $cellW +  2 * $borderPadding;
+	}
+}
+
+.cellOuterBorder{
+	background-color: white;
+	width: $cellWDef + 4 * $borderPadding;
+	height: $cellHt + 4 * $borderPadding;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	border: 2px solid $myBlack;
+
+	@media (max-width: $winXS){
+		width: $cellWXS +  4 * $borderPadding;
+	}
+	@media (min-width: $winSm){
+		width: $cellWSm +  4 * $borderPadding;
+	}
+	@media (min-width: $winMed){
+		width: $cellWM +  4 * $borderPadding;
+	}
+	@media (min-width: $winLarge){
+		width: $cellW +  4 * $borderPadding;
+	}
+}
+
+.cell{
+	height: $cellHt;
+	width: $cellWDef;
+	background-color: $myBlack;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;	
+	//border-radius: 5px;
+
+	@media (max-width: $winXS){
+		width: $cellWXS;
+	}
+	@media (min-width: $winSm){
+		width: $cellWSm;
+	}
+	@media (min-width: $winMed){
+		width: $cellWM;
+	}
+	@media (min-width: $winLarge){
+		width: $cellW;
+	}
+}
+
+.cellText{
+	/*
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	*/
+	text-align: center;
+	color: white;
+	font-family: 'Playfair Display';
+	font-size: 10px;
+	font-weight: bold;
+	letter-spacing: 1px;
+
+	@media (min-width: $winSm){
+		font-size: 12px;
+	}
+	@media (min-width: $winMed){
+		font-size: 14px;
+	}
+	@media (min-width: $winLarge){
+		font-size: 18px;
+	}
+}
+
+.cell:hover{
+	cursor: pointer;
+}

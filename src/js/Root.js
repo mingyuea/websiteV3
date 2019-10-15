@@ -8,6 +8,7 @@ import LoadComp from './LoadComp.js';
 import HomePage from './HomePage.js';
 import AboutMe from './AboutMe.js';
 import Projects from './Projects.js';
+import Contact from './Contact.js';
 
 class Root extends React.Component{
 	constructor(props){
@@ -45,6 +46,15 @@ class Root extends React.Component{
 						render={props => (
 							<Suspense fallback={<LoadComp />}>
 								<Projects {...props} />
+							</Suspense>
+						)}
+					/>
+
+					<RouterWrapper
+						exact path="/contact"
+						render={props => (
+							<Suspense fallback={<LoadComp />}>
+								<Contact {...props} />
 							</Suspense>
 						)}
 					/>

@@ -1,0 +1,75 @@
+%slideCont{
+	-webkit-animation: slide 2s;
+       -moz-animation: slide 2s;
+        -ms-animation: slide 2s;
+         -o-animation: slide 2s;
+            animation: slide 2s;
+}
+
+%slideContR{
+    -webkit-animation: slideR 2s;
+       -moz-animation: slideR 2s;
+        -ms-animation: slideR 2s;
+         -o-animation: slideR 2s;
+            animation: slideR 2s;
+}
+
+@keyframes slide {
+    from { left: -400px; }
+    to   { left: 0px; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes slide {
+    from { left: -400px; }
+    to   { left: 0px; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes slide {
+    from { left: -400px; }
+    to   { left: 0px; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes slide {
+    from { left: -400px; }
+    to   { left: 0px; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes slide {
+    from { left: -400px; }
+    to   { left: 0px; }
+}
+
+/*------------right slide-------------*/
+
+@keyframes slideR {
+    from { right: -400px; }
+    to   { right: 0px; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes slideR {
+    from { right: -400px; }
+    to   { right: 0px; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes slideR {
+    from { right: -400px; }
+    to   { right: 0px; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes slideR {
+    from { left: -400px; }
+    to   { left: 0px; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes slideR {
+    from { right: -400px; }
+    to   { right: 0px; }
+}

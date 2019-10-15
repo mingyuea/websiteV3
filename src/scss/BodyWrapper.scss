@@ -5,12 +5,14 @@
 	position: relative;
 	//display: block;
 	width: 100%;
+	height: 100%;
 	//top: 90px;
-	 
+	font-family: 'Fira Sans', Sans, Helvetica;
 	padding-top: 90px;
 	//padding-right:3%;
-	padding-bottom: 20px;
+	//padding-bottom: 20px;
 	//padding-left: 3%;
+	overflow-x: hidden;
 
 	@media (max-width: $winXS){
 		padding-top: 140px;
@@ -31,13 +33,14 @@
 	font-family: 'Playfair Display';
 	font-weight: 575;
 	text-align: right;
+	padding-right: 15px;
 	padding-bottom: 20px;
 }
 
 .text{
 	padding: 0px 20px;
 
-	font-family: 'Fira Sans', Sans, Helvetica;
+	//font-family: 'Fira Sans', Sans, Helvetica;
 	font-size: 16px;
 	line-height: 1.6;
 	word-spacing: 1px;

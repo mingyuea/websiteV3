@@ -1,0 +1,59 @@
+@import 'measurements';
+@import 'slideIn';
+
+$xPadding: 3%;
+
+.main{
+	position: relative;
+	width: 100%;
+	display: flex;
+
+	@media (max-width: $winMed){
+		display: block;
+	}
+}
+
+%halfDiv{
+	position: relative;
+	//height: 100%;
+	display: inline-block;
+	padding: 15px $xPadding;
+}
+
+.bigger1{
+	@extend %halfDiv;
+	width: 60% - 2 * $xPadding;
+
+	@media (max-width: $winMed){
+		padding: 10px 4%;
+		width: 92%
+	}
+}
+
+.smaller1{
+	@extend %halfDiv;
+	width: 40% - 2 * $xPadding;
+
+	@media (max-width: $winMed){
+		padding: 10px 4%;
+		width: 92%
+	}
+}
+
+.equal{
+	@extend %halfDiv;
+	width: 50% - 2 * $xPadding;
+
+	@media (max-width: $winMed){
+		padding: 10px 4%;
+		width: 92%
+	}
+}
+
+.slideLeft{
+	@extend %slideCont;
+}
+
+.slideRight{
+	@extend %slideContR;
+}

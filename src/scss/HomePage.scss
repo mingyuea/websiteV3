@@ -1,0 +1,142 @@
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display);
+
+@import 'slideIn';
+@import 'fadeInLong';
+@import 'measurements';
+
+$myBlack: rgba(0,0,0,0.92);
+
+.main{
+	font-family: 'Playfair Display';
+	position: relative;
+	//padding-top: 9vh;
+	float: bottom;
+	//height: 100%;
+}
+
+.circle{
+	@extend %slideCont;
+
+	position: relative;
+	margin-left: 25px;
+	width: 200px;
+	height: 200px;
+	color: white;
+	display: inline-flex;
+	border-radius: 50%;
+	align-items: center;
+	justify-content: center;
+	background-color: $myBlack;
+	font-size: 22px;
+
+	@media (min-width: $winMed){
+		width: 250px;
+		height: 250px;
+		font-size: 30px;
+	}
+	@media (min-width: $winLarge){
+		width: 275px;
+		height: 275px;
+		font-size: 40px;
+	}
+	@media (min-width: $winXL){
+		width: 300px;
+		height: 300px;
+		font-size: 46px;
+		margin-left: 40px;
+	}
+	@media (min-width: 1000px){
+		width: 325px;
+		height: 325px;
+		font-size: 50px;
+		margin-left: 95px;
+	}
+}
+
+.textDiv{
+	@extend %fadeCont;
+
+	display: inline-flex;
+	margin-left: 3vw;
+	padding-top: 10px;
+
+	@media (max-width:$winXS){
+		display: flex;
+	}
+	@media (min-width: $winMed){
+		margin-left: 1vw;
+	}
+	@media (min-width: $winXL){
+		padding-left: 5vw;
+	}
+	@media (min-width: 1000px){
+		padding-left: 10vw;
+	}
+}
+
+.title{
+	font-size: 28px;
+
+	@media (min-width: $winMed){
+		font-size: 34px;
+	}
+	@media (min-width: $winLarge){
+		font-size: 44px;
+	}
+	@media (min-width: $winXL){
+		font-size: 56px;
+		padding-right: 2vw;
+	}
+	@media (min-width: 1000px){
+		font-size: 56px;
+		padding-right: 6vw;
+	}
+}
+
+.footer{
+	//margin-top: 2vh;
+	position: relative;
+	display: block;
+
+    @media (min-height: 600px){
+    	margin-top: 5vh;
+    }
+}
+
+.footerSlant{
+	width: 100%;
+    height: 0px;
+    background-color: $myBlack;
+    border-bottom: 10vh solid $myBlack;
+    border-left: 100vw solid white;
+
+    @media (min-width: $winLarge){
+    	border-bottom: 10vh solid $myBlack;
+    }
+}
+
+
+.footerBlock{
+	width: 100%;
+    height: 25px;
+    background-color: black;
+    
+    @media (min-width: $winMed){
+    	height: 10px;
+    }
+    @media (min-width: $winLarge){
+    	height: 15px;
+    }
+}
+
+.footerBottom{
+	width: 100%;
+    height: 0px;
+    background-color: $myBlack;
+    border-top: 10vh solid $myBlack;
+    border-left: 100vw solid white;
+
+    @media (min-width: $winLarge){
+    	border-top: 10vh solid $myBlack;
+    }
+}

@@ -1,0 +1,32 @@
+@import 'measurements';
+@import 'fadeIn';
+
+.rowCont{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	margin: 15px 0px;
+	padding: 0px 10px;
+
+	
+	@media (max-width: $winSm){
+		flex-direction: column;
+		flex-wrap: wrap;
+	}
+	@media (min-width: $winLarge){
+		justify-content: space-around;
+	}
+}
+
+.fadeCont{
+	@extend %fadeCont;
+}
+
+.fadeCont5{
+	@extend %fadeCont5;
+}
+
+.fadeCont8{
+	@extend %fadeCont8;
+}
